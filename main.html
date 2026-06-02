@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L'Élégance | Perfumería</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">Ivo 'Essence</div>
+        <nav>
+            <button class="nav-btn" onclick="showView('inicio')">Inicio</button>
+            <button class="nav-btn" onclick="showView('catalogo')">Catálogo</button>
+            <button class="nav-btn" id="btn-carrito" onclick="showView('carrito')">Carrito (0)</button>
+        </nav>
+    </header>
+
+    <main class="app-container">
+
+        <section id="inicio" class="view active-view">
+            <div class="hero">
+                <h1>Descubre tu esencia</h1>
+                <p>Fragancias exclusivas para personalidades únicas.</p>
+                <button class="btn-primary" onclick="showView('catalogo')">Ver Colección</button>
+            </div>
+        </section>
+
+        <section id="catalogo" class="view">
+            <h2>Nuestra Colección</h2>
+            <div class="product-grid">
+                <article class="product-card">
+                    <div class="product-image">📦</div> <h3>Oud Noir</h3>
+                    <p class="notes">Notas: Madera, Cuero, Especias</p>
+                    <p class="price">$85.000</p>
+                    <button class="btn-secondary">Agregar al carrito</button>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-image">🌸</div>
+                    <h3>Rose Éternelle</h3>
+                    <p class="notes">Notas: Rosa, Jazmín, Vainilla</p>
+                    <p class="price">$72.000</p>
+                    <button class="btn-secondary">Agregar al carrito</button>
+                </article>
+                
+                <article class="product-card">
+                    <div class="product-image">🌊</div>
+                    <h3>Acqua Marina</h3>
+                    <p class="notes">Notas: Cítricos, Sal marina, Almizcle</p>
+                    <p class="price">$65.000</p>
+                    <button class="btn-secondary">Agregar al carrito</button>
+                </article>
+            </div>
+        </section>
+
+        <section id="carrito" class="view">
+            <h2>Tu Pedido</h2>
+            <div class="cart-container">
+                <p>Tu carrito está vacío.</p>
+                <hr>
+                <h3>Total: $0</h3>
+                <button class="btn-primary">Finalizar Compra</button>
+            </div>
+        </section>
+
+    </main>
+
+</body>
+</html>
