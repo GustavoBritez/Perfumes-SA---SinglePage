@@ -4,8 +4,7 @@
 
 const cart = {
     items: JSON.parse(localStorage.getItem('cartItems')) || [],
-    whatsappNumber: '+541234567890', // CAMBIAR POR EL NÚMERO REAL DE LA EMPRESA
-
+    whatsappNumber: '+5491150554904',
     addToCart(perfumeIndex) {
         const perfume = perfumeDatabase[perfumeIndex];
 
