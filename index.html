@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ivo 'Essence - Catálogo de Perfumes</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+    <!-- Navegación -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="logo">Ivo 'Essence</div>
+            <ul class="nav-menu">
+                <li><a href="#" class="nav-link" data-page="inicio">Inicio</a></li>
+                <li><a href="#" class="nav-link" data-page="catalogo">Catálogo</a></li>
+                <li><a href="#" class="nav-link cart-link" data-page="carrito">
+                        🛒 Carrito <span class="cart-count">0</span>
+                    </a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Contenedor Principal -->
+    <main class="main-container">
+
+        <!-- Página: Inicio -->
+        <section id="inicio" class="page active">
+            <div class="hero">
+                <h1>Bienvenido a Ivo 'Essence</h1>
+                <p>Descubre nuestra colección exclusiva de perfumes de diseñador</p>
+                <button class="btn btn-primary" onclick="app.navigateTo('catalogo')">Ver Catálogo</button>
+            </div>
+        </section>
+
+        <!-- Página: Catálogo -->
+        <section id="catalogo" class="page">
+            <div class="catalogo-container">
+                <h2>Nuestro Catálogo</h2>
+
+                <!-- Buscador -->
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="🔍 Buscar perfume..." class="search-input">
+                    <span class="search-results" id="searchResults"></span>
+                </div>
+
+                <!-- Filtro de Categorías -->
+                <div class="category-filter">
+                    <button class="category-btn active" data-category="todas">Todas (185+)</button>
+                    <button class="category-btn" data-category="masculinos-diseñador">👨 Masculinos Diseñador
+                        (80+)</button>
+                    <button class="category-btn" data-category="masculinos-arabes">👨 Masculinos Árabes (30+)</button>
+                    <button class="category-btn" data-category="unisex-arabes">👥 Unisex Árabes (30+)</button>
+                    <button class="category-btn" data-category="femeninos-diseñador">👩 Femeninos Diseñador
+                        (80+)</button>
+                    <button class="category-btn" data-category="femeninos-arabes">👩 Femeninos Árabes (30+)</button>
+                </div>
+
+                <!-- Grid de Perfumes -->
+                <div class="grid-controls">
+                    <button class="carousel-btn prev" id="prevBtn">❮ Anterior</button>
+                    <span class="page-indicator" id="pageIndicator">Página 1</span>
+                    <button class="carousel-btn next" id="nextBtn">Siguiente ❯</button>
+                </div>
+
+                <div class="perfumes-grid" id="perfumesGrid">
+                    <!-- Los perfumes se cargan dinámicamente aquí -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Página: Carrito -->
+        <section id="carrito" class="page">
+            <div class="carrito-container">
+                <h2>Tu Carrito</h2>
+
+                <div class="cart-items" id="cartItems">
+                    <p class="empty-cart">El carrito está vacío</p>
+                </div>
+
+                <div class="cart-summary" id="cartSummary" style="display: none;">
+                    <hr>
+                    <div class="summary-row">
+                        <span>Cantidad de items:</span>
+                        <span id="totalItems">0</span>
+                    </div>
+                    <div class="summary-row total">
+                        <span>Total:</span>
+                        <span id="totalPrice">$0</span>
+                    </div>
+                    <button class="btn btn-primary full-width" onclick="cart.generateWhatsAppMessage()">
+                        📱 Enviar por WhatsApp
+                    </button>
+                    <button class="btn btn-secondary full-width" onclick="cart.clearCart()">
+                        Limpiar Carrito
+                    </button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 Ivo 'Essence. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/cart.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
